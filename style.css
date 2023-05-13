@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Condensed&family=Chivo+Mono&family=Inconsolata&family=Montserrat&family=Mulish:wght@200;400&family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&family=Sono&family=Space+Mono&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,8 +6,8 @@
 
 body {
     background-color: #30DDCE ;
-    font-family: 'Amatic SC', cursive,sans-serif;
-    font-weight: bold; 
+    font-family: 'Amatic SC', cursive,sans-serif !important;
+    font-weight: bolder; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,13 +18,22 @@ body {
     margin: 0;
 }
 
+i {
+  font-size: 12.5rem;
+  color: #dedede;
+}
+
+.upIcon {
+  font-size: 16px;
+}
+
 h1,
-h3 {
+h2 {
     margin-bottom: 0;
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
   }
   
@@ -55,5 +64,6 @@ p {
     font-size: 30px;
     margin: 20px;
     padding: 20px;
+    border-radius: 10px;
   }
   

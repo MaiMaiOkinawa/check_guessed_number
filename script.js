@@ -1,4 +1,6 @@
 const msgEl = document.getElementById('msg');
+const audio = document.querySelectorAll('audio');
+
 
 // Assign getRandomNumber function
 const randomNum = getRandomNumber();
@@ -55,15 +57,20 @@ function checkNumber(msg) {
     `;
   } else if (num > randomNum) {
     // Append this messege to the msg
-    msgEl.innerHTML += '<div>GO LOWER</div>'
+    msgEl.innerHTML += '<div>⬇︎⬇︎ GO LOWER ⬇︎⬇︎</div>'
   } else {
     // Append this messege to the msg
-    msgEl.innerHTML += '<div>GO HIGHER</div>';
+    msgEl.innerHTML +=
+      '<div>⬆︎⬆︎ GO HIGHER ⬆︎⬆︎</div>';
   }
 }
 // Create a random number from 0 to 100
 function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
+}
+
+function playAudio() {
+  audio.play();
 }
 
 // Speak result
@@ -77,6 +84,8 @@ document.body.addEventListener('click', (e) => {
   // If event.target.id = #play-again, reload the window
   if (e.target.id == 'play-again') {
     window.location.reload();
+    const sound = '/sounds/correctNum.mp3'
+    playAudio('sound');
   }
 });
 
